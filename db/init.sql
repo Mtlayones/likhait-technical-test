@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS expenses (
   description VARCHAR(255) NOT NULL,
   amount DECIMAL(10, 2) NOT NULL,
   category_id INT NOT NULL,
-  payer_name VARCHAR(100) NOT NULL,
+  payer_name VARCHAR(100) NULL,
   date DATE NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -32,7 +32,13 @@ VALUES ('Food'),
   ('Utilities') ON DUPLICATE KEY
 UPDATE name = name;
 -- Seed expenses
-INSERT INTO expenses (description, amount, category_id, payer_name)
+INSERT INTO expenses (
+    description,
+    amount,
+    category_id,
+    payer_name,
+    date
+  )
 VALUES (
     'Team Lunch at Italian Restaurant',
     1500.50,
@@ -54,8 +60,20 @@ VALUES (
     'Mike Johnson',
     '2026-07-17'
   ),
-  ('Team Building Dinner', 2800.00, 1, 'Sarah Lee'),
-  ('Taxi to Airport', 800.00, 2, 'John Doe'),
+  (
+    'Team Building Dinner',
+    2800.00,
+    1,
+    'Sarah Lee',
+    '2026-07-17'
+  ),
+  (
+    'Taxi to Airport',
+    800.00,
+    2,
+    'John Doe',
+    '2026-07-17'
+  ),
   (
     'Coffee and Snacks for Meeting',
     250.25,
