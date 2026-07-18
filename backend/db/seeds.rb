@@ -6,16 +6,16 @@ Category.destroy_all
 # Create categories
 puts "Creating categories..."
 categories = [
-  ['Food', '🍔'],
-  ['Transportation', '🚗'],
-  ['Shopping', '🛍️'],
-  ['Entertainment', '🎬'],
-  ['Bills', '📄'],
-  ['Healthcare', '🏥'],
-  ['Education', '📚'],
-  ['Travel', '✈️'],
-  ['Personal', '👤'],
-  ['Other', '📦']
+  [ 'Food', '🍔' ],
+  [ 'Transportation', '🚗' ],
+  [ 'Shopping', '🛍️' ],
+  [ 'Entertainment', '🎬' ],
+  [ 'Bills', '📄' ],
+  [ 'Healthcare', '🏥' ],
+  [ 'Education', '📚' ],
+  [ 'Travel', '✈️' ],
+  [ 'Personal', '👤' ],
+  [ 'Other', '📦' ]
 ]
 
 created_categories = categories.map do |cat_name, icon|
