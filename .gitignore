@@ -13,6 +13,10 @@
 !/backend/log/.keep
 !/backend/tmp/.keep
 
+# Ignore the vendor bundle directory, but keep the directory.
+/backend/vendor/bundle/*
+!/backend/vendor/bundle/
+
 # Ignore pidfiles, but keep the directory.
 /backend/tmp/pids/*
 !/backend/tmp/pids/
@@ -31,6 +35,9 @@
 # Node modules
 /frontend/node_modules
 /frontend/dist
+
+# package-lock.json
+/frontend/package-lock.json
 
 # Environment variables
 .env
@@ -65,3 +72,4 @@ yarn-error.log*
 
 # RSpec
 /backend/.rspec_status
+frontend/package-lock.json
