@@ -19,6 +19,19 @@ export interface ExpenseFormData {
   date: string;
 }
 
+export interface Category {
+	id: number;
+	name: string;
+	icon: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface CategoryFormData {
+  name: string;
+  icon: string;
+} 
+
 export interface MonthlySummary {
   totalExpenses: number;
   categoryBreakdown: CategoryBreakdown[];
